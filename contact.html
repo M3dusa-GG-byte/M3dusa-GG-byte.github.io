@@ -1,0 +1,410 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link href="static/assets/css/app.css?hash=FIx9GXJ2yxyNSYVk" rel="stylesheet">
+		<meta name="google-site-verification" content="8kDVb1U83X9tvIBFSqOfemMOGwRcWc-H1BOBZE_5gCI">
+		<meta name="yandex-verification" content="f5eb71addea0ad12">
+		<meta name="verification" content="28d5f7d28e31fd5be4e94628a4f47a">
+		<meta name="verification" content="90d32c4e6c1a5a36161bf452761d2d">
+		<meta name="webmoney.attestation.label" content="webmoney attestation label#52271762-51F0-4D8F-842B-AB98F530A59B">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, user-scalable=no">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>Angel - Contacts</title>
+
+	<meta name="msapplication-TileColor" content="#0095B9">
+	<meta name="theme-color" content="#030f1a">
+<link rel="apple-touch-icon" sizes="180x180" href="static/assets/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="static/assets/favicon/sq-orig/iconka.jpg">
+<link rel="icon" type="image/png" sizes="16x16" href="static/assets/favicon/sq-orig/iconka.jpg">
+<link rel="manifest" href="static/assets/favicon/site.webmanifest">
+<link rel="mask-icon" href="static/assets/favicon/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+	<style>
+.horizontal_btn {
+  display: flex;
+  column-gap: 15px;
+}
+
+textarea.input_aug {
+  width: 100%;
+  max-width: 100%;
+  min-width: 100%;
+  min-height: 77px;
+  height: 77px;
+  padding-left: 10px;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+  color: #fff;
+  font-size: 14px;
+  background: rgba(0,0,0,0);
+  border: 1px solid rgba(0,149,185,.3);
+  outline: none;
+  border-radius: 4px;
+  -moz-appearance: textfield;
+}
+
+.paste_popup {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end !important;
+    row-gap: 15px !important;
+    padding: 20px 40px;
+}
+.paste_popup .text {
+    width: 100%;
+    text-align: left;
+    font-weight: 600;
+    color: #fff;
+}
+
+.soc_fixed .items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 2;
+  margin-left: 5px !important;
+}
+
+.soc_fixed {
+  bottom: 35%;
+  align-items: center;
+  left: 20px !important;
+}
+
+.soc_fixed p {
+  width: auto;
+  -webkit-transform-origin: top;
+  -ms-transform-origin: top;
+  transform-origin: top;
+}
+
+footer .copy {
+  --lrpad: 0px;
+  padding-left: var(--lrpad) !important;
+  padding-right: var(--lrpad) !important;
+}
+
+.grid-table {
+    --border: 1px solid rgba(0,149,185,0.3);
+    display: grid;
+    gap: 0;
+    grid-auto-rows: auto;
+    border-left: var(--border);
+}
+
+.grid-table :is(.gth, .gtd) {
+    border-right: var(--border);
+    border-bottom: var(--border);
+    padding: 10px;
+}
+
+.grid-table .gth {
+    background-color: rgba(0,149,185,0.3);
+}
+	</style>
+</head>
+<body>
+	<div>
+		<!-- div id="ball"></div -->
+    <div style="display: none;" id="xd-csrf--" x-csrf=""></div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function(){
+        let cse = document.getElementById("xd-csrf--");
+        let cst = cse.getAttribute("x-csrf");
+        if (!cst) { return; }
+
+        let forms = document.getElementsByTagName("form");
+        for(var i = 0; i < forms.length; i++) {
+          let input = document.createElement("input");
+          input.type = "hidden";
+          input.name = "csrf";
+          input.value = cst;
+          forms[i].appendChild(input);
+        }
+      });
+    </script>
+
+<style>
+    .check-new{
+        align-self: flex-start;
+        padding-left: 60px !important;
+    }
+    .userform input:disabled {
+        opacity: 0.7;
+        cursor: not-allowed !important;
+    }
+    .userform :is(button, input[type=submit]):disabled {
+        background-color: #005b71 !important;
+    }
+</style>
+<div class="popup_fade"></div>
+
+<script>
+        var auth_captcha;
+        var reg_captcha;
+        var forgot_captcha;
+        var captchaCallBack = function() {
+            auth_captcha = grecaptcha.render('auth-captcha', {
+                'sitekey' : '6LfltkAUAAAAAIYhSuMgm33hCMmhtkuj4iLOzaxn',
+                'theme' : 'light'
+            });
+
+            reg_captcha = grecaptcha.render('reg-captcha', {
+                'sitekey' : '6LfltkAUAAAAAIYhSuMgm33hCMmhtkuj4iLOzaxn',
+                'theme' : 'light'
+            });
+            
+            forgot_captcha = grecaptcha.render('forgot-captcha', {
+                'sitekey' : '6LfltkAUAAAAAIYhSuMgm33hCMmhtkuj4iLOzaxn',
+                'theme' : 'light'
+            });
+        };
+</script>
+
+<div class="popups" id="reg">
+    <div class="block widthPopUp">
+        <div class="close">
+            <a href="#"><i class="fas fa-times-circle"></i></a>
+        </div>
+        <form method="post" action="/doregister" class="userform">
+            <div class="container flex-cont">
+                <div class="logo">
+        
+                </div>
+                <div class="status"></div>
+                <div class="input_log">
+                    <input type="text" placeholder="Логин" name="login" required="">
+                </div>
+                <div class="input_pass">
+                    <input type="password" placeholder="Пароль" name="password" required="">
+                </div>
+                <div class="input_email">
+                    <input type="email" placeholder="Электронная почта" name="email" required="">
+                </div>
+                <div class="capcha"><div id="auth-captcha"></div></div>
+                
+                <div class="check check-new">
+                    <input type="checkbox" name="yes" id="yesCheck" required="">
+                    <label for="yesCheck">Я согласен с <a href="tos.html">условиями использования</a>
+                        
+                    </label>
+                </div>
+                <div class="check check-new">
+                    <input type="checkbox" name="yes" id="yesCheck2" required="">
+                    <label for="yesCheck2">Я согласен с  <a href="legal.html">договором оферты</a>
+                    </label>
+                </div>
+                <div class="check check-new">
+                    <input type="checkbox" name="yes" id="yesCheck3" required="">
+                    <label for="yesCheck3">Я согласен с <a href="privacy.html">политикой конфиденциальности</a>
+                    </label>
+                </div>
+                <input type="submit" value="Регистрация" class="btn">
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="popups" id="log">
+    <div class="block widthPopUp">
+        <div class="close">
+            <a href="#"><i class="fas fa-times-circle"></i></a>
+        </div>
+        <form method="post" action="/login" class="userform">
+            <div class="container flex-cont">
+                    <div class="logo">
+
+                    </div>
+                    <div class="status"></div>
+                    <div class="input_log">
+                        <input type="text" placeholder="Логин" name="login" required="">
+                    </div>
+                    <div class="input_pass">
+                        <input type="password" placeholder="Пароль" name="password" required="">
+                    </div>
+                    <div class="capcha"><div id="reg-captcha"></div></div>
+                    <input type="submit" value="Логин" class="btn">
+                    <div class="some_text">
+                        <a href="#respassw" class="to-popup">Забыли пароль?</a>
+                        <a href="#respassw" class="to-popup">Не пришло письмо активации?</a>
+                        <a href="#reg" class="to-popup">Нет учетной записи? <span>Регистрация</span></a>
+                    </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="popups" id="2facode">
+    <div class="block widthPopUp">
+        <div class="close">
+            <a href="#"><i class="fas fa-times-circle"></i></a>
+        </div>
+        <form method="post" action="/2falogin" class="userform">
+            <div class="container flex-cont">
+                    <div class="logo">
+                        <a href="index.htm">
+                        </a>
+                    </div>
+                    <div class="status"></div>
+					
+					<div class="twofa_text">
+                      Please enter the verification code generated by the app on your phone.
+                    </div>
+					
+                    <div class="input_log" style="margin-bottom:5px;">
+                        <input type="text" placeholder="Code from authenticator" name="code" required="" maxlength="6" minlength="6">
+                    </div>
+                    <input type="submit" value="Логин" class="btn">
+                <div class="some_text">
+                    <a href="lost_2fa_help.html" target="_blank">Потеряли аутентификатор?</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="popups" id="respassw">
+    <div class="block widthPopUp">
+        <div class="close">
+            <a href="#"><i class="fas fa-times-circle"></i></a>
+        </div>
+        <form method="post" action="/resetpassw" class="userform">
+            <div class="container flex-cont">
+                    <div class="logo">
+                        <a href="index.htm">
+ 
+                        </a>
+                    </div>
+                    <div class="status"></div>
+                    <div class="input_email">
+                        <input type="email" placeholder="Электронная почта" name="email" required="">
+                    </div>
+                    <div class="capcha"><div id="forgot-captcha"></div></div>
+                    <input type="submit" value="Отправить" class="btn">
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="popups" id="respasswconf">
+    <div class="block widthPopUp">
+        <div class="close">
+            <a href="#"><i class="fas fa-times-circle"></i></a>
+        </div>
+        <form method="post" action="/resetconf" class="userform">
+            <div class="container flex-cont">
+                    <div class="logo">
+                        <a href="index.htm">
+
+                        </a>
+                    </div>
+                    <div class="status"></div>
+                    <div class="input_pass">
+                        <input type="password" placeholder="Пароль" name="newpass" required="">
+                    </div>
+                    <input type="hidden" name="emtoken" value="">
+                    <input type="submit" value="Отправить" class="btn">
+            </div>
+        </form>
+    </div>
+</div>
+
+
+		<section class="menu">
+			<div class="logo">
+				<div class="img">
+</a>
+				</div>
+			</div>
+			<div class="links">
+				<a href="index.htm"> Главная</a>
+                <a></a>
+                <a></a>
+                <a></a>
+			</div>
+			<div class="other">
+				
+				<div class="custom-select lang">
+				</div>
+				</div>
+			</div>
+		</section>
+<section class="help">
+    <div class="wrapper">
+        <h1><p align="center">Contact</p></h1>
+
+        <div class="container">
+            <div class="text">
+                <pre>
+                <a> Бот для покупки - @ANGELHACK777_BOT</a>
+                <a> Телеграм канал создателя - https://t.me/FrozenAngel777</a>
+                <a> Дискорд (поддержка и общение с пользователями чита) https://discord.gg/rxnMpMH5Vg</a>
+</pre>
+            </div>
+        </div>
+    </div>
+</section>
+        
+        <footer>
+			<div class="container">
+				<div class="logo">
+					<div class="img">
+
+					</div>
+				</div>
+				<div class="footer_links">
+					<div class="useful_links">
+						<!--a href="/forum">Форум</a-->
+					</div>
+					<div class="separator"></div>
+					<div class="product_links">
+					</div>
+					<!--img src="/static/assets/img/mps_logo.png" style="width:250px"-->
+					<!--div class="soc">
+						<p>Присоединяйтесь!</p>
+<div class="items">
+    <div class="item"><a target="_blank" href="https://t.me/neverlosecc"><i class="fab fa-telegram-plane"></i></a></div>
+    <div class="item"><a target="_blank" href="https://vk.com/neverlose"><i class="fab fa-vk"></i></a></div>
+    <div class="item"><a target="_blank" href="/ds"><i class="fab fa-discord"></i></a></div>
+    <div class="item"><a target="_blank" href="https://www.youtube.com/channel/UCxVN7ejqdHXZlfukimxyaxA"><i class="fab fa-youtube"></i></a></div>
+</div>
+					</div-->
+				</div>
+
+
+				<div class="copy">
+					neverlose.cc © 2020-2025<br><br>
+					CS2 are registered trademarks of
+					Valve Corporation. Our product, Angel, is not affiliated with, endorsed by, or
+					sponsored by Valve Corporation or its affiliates. All trademarks, service marks, and
+					trade names used in this website are the property of their respective owners.<br>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+    <script type="text/javascript" src="static/assets/js/app.js?hash=07JJLMk_z6QbJc-J"></script>
+<script src='recaptcha/api.js?onload=captchaCallBack&render=explicit'></script>
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+	(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+	m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+	(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+ 
+	ym(64402294, "init", {
+		 clickmap:true,
+		 trackLinks:true,
+		 accurateTrackBounce:true
+	});
+ </script>
+ <noscript><div><img src="watch/64402294" style="position:absolute; left:-9999px;" alt=""></div></noscript>
+ <!-- /Yandex.Metrika counter -->
+
+
+
+<!--  -->
+</body>
+</html>
